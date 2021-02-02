@@ -1,0 +1,324 @@
+
+*** Running vivado
+    with args -log top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
+
+
+
+****** Vivado v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source top.tcl -notrace
+create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1139.746 ; gain = 0.000
+Command: synth_design -top top -part xc7a35ticsg324-1L
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35ti'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35ti'
+INFO: [Device 21-403] Loading part xc7a35ticsg324-1L
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 10020
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:17 . Memory (MB): peak = 1186.695 ; gain = 46.949
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'top' [C:/prj/puf_lighter/src/xhdl/top.vhd:99]
+INFO: [Synth 8-3491] module 'clk_wiz_0' declared at 'C:/prj/puf_lighter/puf_lighter.runs/synth_1/.Xil/Vivado-12540-DESKTOP-4FDJK74/realtime/clk_wiz_0_stub.v:5' bound to instance 'ist_clk_wiz' of component 'clk_wiz_0' [C:/prj/puf_lighter/src/xhdl/top.vhd:127]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [C:/prj/puf_lighter/puf_lighter.runs/synth_1/.Xil/Vivado-12540-DESKTOP-4FDJK74/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (1#1) [C:/prj/puf_lighter/puf_lighter.runs/synth_1/.Xil/Vivado-12540-DESKTOP-4FDJK74/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-638] synthesizing module 'master_fsm' [C:/prj/puf_lighter/src/xhdl/master_fsm.vhd:47]
+INFO: [Synth 8-256] done synthesizing module 'master_fsm' (2#1) [C:/prj/puf_lighter/src/xhdl/master_fsm.vhd:47]
+INFO: [Synth 8-638] synthesizing module 'arbiter_puf' [C:/prj/puf_lighter/src/xhdl/arbiter_puf/arbiter_puf.vhd:22]
+INFO: [Synth 8-638] synthesizing module 'delay_line' [C:/prj/puf_lighter/src/xhdl/arbiter_puf/delay_line.vhd:33]
+INFO: [Synth 8-638] synthesizing module 'mux' [C:/prj/puf_lighter/src/xhdl/arbiter_puf/mux.vhd:33]
+INFO: [Synth 8-113] binding component instance 'inst_muxf7' to cell 'MUXF7' [C:/prj/puf_lighter/src/xhdl/arbiter_puf/mux.vhd:43]
+INFO: [Synth 8-256] done synthesizing module 'mux' (3#1) [C:/prj/puf_lighter/src/xhdl/arbiter_puf/mux.vhd:33]
+INFO: [Synth 8-256] done synthesizing module 'delay_line' (4#1) [C:/prj/puf_lighter/src/xhdl/arbiter_puf/delay_line.vhd:33]
+INFO: [Synth 8-638] synthesizing module 'dff' [C:/prj/puf_lighter/src/xhdl/arbiter_puf/dff.vhd:33]
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_R_INVERTED bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'inst_fdre' to cell 'FDRE' [C:/prj/puf_lighter/src/xhdl/arbiter_puf/dff.vhd:49]
+INFO: [Synth 8-256] done synthesizing module 'dff' (5#1) [C:/prj/puf_lighter/src/xhdl/arbiter_puf/dff.vhd:33]
+INFO: [Synth 8-256] done synthesizing module 'arbiter_puf' (6#1) [C:/prj/puf_lighter/src/xhdl/arbiter_puf/arbiter_puf.vhd:22]
+INFO: [Synth 8-638] synthesizing module 'ws2812b' [C:/prj/puf_lighter/src/xhdl/ws2812b.vhd:49]
+	Parameter C_LENGTH bound to: 60 - type: integer 
+	Parameter C_CLK bound to: 25 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'ws2812b' (7#1) [C:/prj/puf_lighter/src/xhdl/ws2812b.vhd:49]
+INFO: [Synth 8-256] done synthesizing module 'top' (8#1) [C:/prj/puf_lighter/src/xhdl/top.vhd:99]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:13 ; elapsed = 00:00:20 . Memory (MB): peak = 1241.730 ; gain = 101.984
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:14 ; elapsed = 00:00:22 . Memory (MB): peak = 1241.730 ; gain = 101.984
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:22 . Memory (MB): peak = 1241.730 ; gain = 101.984
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 1241.730 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 48 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/prj/puf_lighter/puf_lighter.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'ist_clk_wiz'
+Finished Parsing XDC File [c:/prj/puf_lighter/puf_lighter.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'ist_clk_wiz'
+Parsing XDC File [C:/prj/puf_lighter/src/xdc/puf_place.xdc]
+Finished Parsing XDC File [C:/prj/puf_lighter/src/xdc/puf_place.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/prj/puf_lighter/src/xdc/puf_place.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [C:/prj/puf_lighter/src/xdc/pin_assign.xdc]
+Finished Parsing XDC File [C:/prj/puf_lighter/src/xdc/pin_assign.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/prj/puf_lighter/src/xdc/pin_assign.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [C:/prj/puf_lighter/src/xdc/debug.xdc]
+Finished Parsing XDC File [C:/prj/puf_lighter/src/xdc/debug.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1352.969 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.017 . Memory (MB): peak = 1352.969 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:28 ; elapsed = 00:00:40 . Memory (MB): peak = 1352.969 ; gain = 213.223
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35ticsg324-1L
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:28 ; elapsed = 00:00:40 . Memory (MB): peak = 1352.969 ; gain = 213.223
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for iclk. (constraint file  c:/prj/puf_lighter/puf_lighter.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for iclk. (constraint file  c:/prj/puf_lighter/puf_lighter.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc, line 4).
+Applied set_property KEEP_HIERARCHY = SOFT for ist_clk_wiz. (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:28 ; elapsed = 00:00:40 . Memory (MB): peak = 1352.969 ; gain = 213.223
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'master_fsm'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'ws2812b'
+INFO: [Synth 8-802] inferred FSM for state register 'state_cnt_reg' in module 'ws2812b'
+INFO: [Synth 8-6159] Found Keep on FSM register 'state_reg' in module 'master_fsm', re-encoding will not be performed
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+                      s0 |                             0000 |                             0000
+                      s1 |                             0001 |                             0001
+                      s2 |                             0010 |                             0010
+                    s2_1 |                             0011 |                             0011
+                      s3 |                             0100 |                             0100
+                      s4 |                             0101 |                             0101
+                      s5 |                             0110 |                             0110
+                      s6 |                             0111 |                             0111
+                      s7 |                             1000 |                             1000
+                      s8 |                             1001 |                             1001
+---------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                      s0 |                                0 |                               00
+                      s1 |                                1 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_cnt_reg' using encoding 'sequential' in module 'ws2812b'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                      s0 |                     000000000001 |                             0000
+                    s0_0 |                     000000000010 |                             0001
+                      s2 |                     000000000100 |                             0011
+                      s3 |                     000000001000 |                             0100
+                    s3_1 |                     000000010000 |                             0101
+                    s3_2 |                     000000100000 |                             0110
+                      s4 |                     000001000000 |                             0111
+                    s4_1 |                     000010000000 |                             1000
+                    s4_2 |                     000100000000 |                             1001
+                      s5 |                     001000000000 |                             1010
+                      s6 |                     010000000000 |                             1011
+                      s8 |                     100000000000 |                             1101
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'ws2812b'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:29 ; elapsed = 00:00:42 . Memory (MB): peak = 1352.969 ; gain = 213.223
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   25 Bit       Adders := 1     
+	   2 Input   24 Bit       Adders := 1     
+	   2 Input   10 Bit       Adders := 1     
+	   2 Input    6 Bit       Adders := 1     
+	   2 Input    5 Bit       Adders := 2     
++---Registers : 
+	               25 Bit    Registers := 1     
+	               24 Bit    Registers := 3     
+	               12 Bit    Registers := 1     
+	               10 Bit    Registers := 1     
+	                6 Bit    Registers := 1     
+	                5 Bit    Registers := 2     
+	                1 Bit    Registers := 10    
++---Muxes : 
+	  11 Input   24 Bit        Muxes := 1     
+	   2 Input   24 Bit        Muxes := 2     
+	  12 Input   12 Bit        Muxes := 2     
+	   2 Input   12 Bit        Muxes := 3     
+	  11 Input   10 Bit        Muxes := 1     
+	   2 Input   10 Bit        Muxes := 2     
+	   2 Input    6 Bit        Muxes := 1     
+	  12 Input    6 Bit        Muxes := 1     
+	  11 Input    5 Bit        Muxes := 1     
+	   2 Input    5 Bit        Muxes := 2     
+	  12 Input    5 Bit        Muxes := 1     
+	  11 Input    4 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 4     
+	   2 Input    1 Bit        Muxes := 12    
+	  11 Input    1 Bit        Muxes := 5     
+	  12 Input    1 Bit        Muxes := 8     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:34 ; elapsed = 00:00:49 . Memory (MB): peak = 1352.969 ; gain = 213.223
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:50 ; elapsed = 00:01:09 . Memory (MB): peak = 1352.969 ; gain = 213.223
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:51 ; elapsed = 00:01:09 . Memory (MB): peak = 1352.969 ; gain = 213.223
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:51 ; elapsed = 00:01:10 . Memory (MB): peak = 1358.238 ; gain = 218.492
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/prj/puf_lighter/src/xhdl/arbiter_puf/dff.vhd:49]
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:00 ; elapsed = 00:01:21 . Memory (MB): peak = 1358.238 ; gain = 218.492
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:00 ; elapsed = 00:01:21 . Memory (MB): peak = 1358.238 ; gain = 218.492
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:00 ; elapsed = 00:01:21 . Memory (MB): peak = 1358.238 ; gain = 218.492
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:00 ; elapsed = 00:01:21 . Memory (MB): peak = 1358.238 ; gain = 218.492
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:00 ; elapsed = 00:01:21 . Memory (MB): peak = 1358.238 ; gain = 218.492
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:00 ; elapsed = 00:01:21 . Memory (MB): peak = 1358.238 ; gain = 218.492
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |clk_wiz_0     |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |clk_wiz |     1|
+|2     |CARRY4  |    16|
+|3     |LUT1    |     3|
+|4     |LUT2    |    14|
+|5     |LUT3    |    14|
+|6     |LUT4    |    23|
+|7     |LUT5    |    41|
+|8     |LUT6    |    48|
+|9     |MUXF7   |    48|
+|10    |FDRE    |   159|
+|11    |FDSE    |    10|
+|12    |IBUF    |     5|
+|13    |OBUF    |     1|
++------+--------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:00 ; elapsed = 00:01:21 . Memory (MB): peak = 1358.238 ; gain = 218.492
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:42 ; elapsed = 00:01:15 . Memory (MB): peak = 1358.238 ; gain = 107.254
+Synthesis Optimization Complete : Time (s): cpu = 00:01:01 ; elapsed = 00:01:22 . Memory (MB): peak = 1358.238 ; gain = 218.492
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 1358.238 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 64 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1373.973 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+43 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:13 ; elapsed = 00:01:43 . Memory (MB): peak = 1373.973 ; gain = 234.227
+INFO: [Common 17-1381] The checkpoint 'C:/prj/puf_lighter/puf_lighter.runs/synth_1/top.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sat Dec 12 23:17:29 2020...
